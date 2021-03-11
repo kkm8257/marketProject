@@ -7,15 +7,6 @@
 
 
 
-html {
-  background-color: #56baed;
-}
-
-body {
-
-  height: 100vh;
-}
-
 a {
   color: #92badd;
   display:inline-block;
@@ -298,27 +289,7 @@ h2 {
 	display: inline;
 }
 
-.join_address_btn {
-	margin-left: 10px;
-	font-size: 12px;
-	line-height: 10px;
-	width: 100px;
-	height: 27px;
-	cursor: pointer;
-	vertical-align: middle;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	color: #263238;
-	border: 1px solid #263238;
-	background: transparent;
-	border-radius: 2px;
-	transition: all 0.7s;
-}
 
-.join_address_btn:hover {
-	background-color: #263238;
-	color: #ffffff;
-}
 
 .check_div {
 	display: flex;

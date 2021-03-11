@@ -12,6 +12,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+        <%if(session.getAttribute("session_ok")==null){ %>
          <li class="nav-item active">
             <a class="nav-link" href="/login">Login
             </a>
@@ -20,8 +21,18 @@
             <a class="nav-link" href="/join">Join
             </a>
           </li>
+          <%}else if(session.getAttribute("session_ok")!=null&&session.getAttribute("session_ok").equals("ok")){ %>
           
+                   <li class="nav-item active">
+            <a class="nav-link" href="/login">Logout
+            </a>
+          </li>
+                   <li class="nav-item active">
+            <a class="nav-link" href="/login">myMarket
+            </a>
+          </li>
           
+          <%} %>
     <!--       <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>

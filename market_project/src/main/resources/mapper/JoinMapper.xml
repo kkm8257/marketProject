@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.kkm.market.mapper.JoinMapper">
+		
+	
+	
+	<insert id="insertUser" parameterType="java.util.HashMap">
+		insert into m_user values(m_user_seq.nextval,#{name},#{id},#{pw},#{email},#{phone})
+	</insert>
+
+	<select id="chk_id" resultType="com.kkm.market.vo.UserVO">
+		select * from m_user where id=#{id}
+	
+	</select>
+
+</mapper>

@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
-<%@ include file="../header/link.jsp" %>
   
 <link href="resources/myCss/home.css" rel="stylesheet">
+<%@ include file="../header/link.jsp" %>
 </head>
 
 <body>

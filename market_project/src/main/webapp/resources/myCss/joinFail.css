@@ -6,11 +6,7 @@
 @import 'font.css';
 
 
-
-
-
-
-.myNav{
-		font-family: 'ELAND_Choice_M';
-		font-size:20px;
+html {
+	height: 120%;
 }
+

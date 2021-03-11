@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@import url("header.css");
+@import url("footer.css");
+@import 'font.css';
+
+
+html,body{
+	height:100%;
+}
+
+
+.join-success-div{
+	width:100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+.success-msgbox{
+		display: flex;
+	justify-content: center;
+	align-items: center;
+		box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
+    font-family: 'ELAND_Choice_M';
+	width:700px;
+	height:300px;
+	font-size:50px;
+	flex-direction: column;
+	
+	
+}
+
+.goHomeBtn{
+		margin-left: 10px;
+	font-size: 12px;
+	line-height: 10px;
+	width: 100px;
+	height: 27px;
+	cursor: pointer;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #263238;
+	border: 1px solid #263238;
+	background: transparent;
+	border-radius: 2px;
+	display: block;
+		transition: all 0.7s;
+	
+}
+
+.goHomeBtn:hover {
+	background-color: #263238;
+	color: #ffffff;
+}

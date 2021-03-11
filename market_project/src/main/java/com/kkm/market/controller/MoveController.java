@@ -1,4 +1,4 @@
-package com.kkm.market.home;
+package com.kkm.market.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +27,16 @@ public class MoveController {
 		return "login/login";
 	}
 	
+	@RequestMapping("/joinSuccess")
+	public String goJoinSuccess(){
+			
+		return "home/joinSuccess";
+	}
+	
+	@RequestMapping("/joinFail")
+	public String goJoinFail(){
+			
+		return "home/joinFail";
+	}
 	
 }
