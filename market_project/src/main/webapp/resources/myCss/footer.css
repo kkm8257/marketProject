@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+
+.myfooter {
+	width: 100%;
+	position: absolute;
+	bottom: -20%;
+	background: #5eaeff;
+	text-align: center;
+	color: white;
+}

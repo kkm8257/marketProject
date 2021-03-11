@@ -1,17 +1,13 @@
 @charset "UTF-8";
 
+
 @import url("header.css");
 @import url("footer.css");
 @import 'font.css';
 
 
-html {
-	height: 120%;
-}
-
-
-.main-content{
-margin-top:100px;
-	
-	
+.myNav{
+				font-family: 'ELAND_Choice_M';
+		
+		font-size:20px;
 }
