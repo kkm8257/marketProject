@@ -9,6 +9,7 @@ public interface ProductMapper {
 	public ProductVO getProductInfo(String market_idx);
 
 	
+	public List<ProductVO> getSearchList(String word);
 
 
 }

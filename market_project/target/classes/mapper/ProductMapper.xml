@@ -10,5 +10,13 @@
 	
 	</select>
 	
+	<select id="getSearchList" resultType="com.kkm.market.vo.ProductVO">
+	
+	
+		select * from m_market where item_title LIKE '%' || #{word} || '%'
+
+	
+	</select>
+	
 
 </mapper>

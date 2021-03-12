@@ -20,6 +20,11 @@ public class ProductService {
 		return productMapper.getProductInfo(market_idx);
 	}
 	
+	public List<ProductVO> getSearchList(String word){
+		
+		return productMapper.getSearchList(word);
+		
+	}
 
 	
 }

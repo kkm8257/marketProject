@@ -55,11 +55,11 @@
 
 
 
-  <form class="d-flex">
-      <input class="my-form-control " type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+  <div class="d-flex">
+      <input class="my-form-control " type="search" placeholder="Search" aria-label="Search" id="search_bar">
+      <button class="btn btn-outline-success" type="submit" id="search_btn">Search</button>
    
-   </form>
+   </div>
 
 	<div class="search-list">
 		
@@ -79,6 +79,38 @@
 
 <script>
 window.scrollTo({top:0,  behavior:'auto'});
+
+$('#search_btn').on('click',function(){
+	
+	var temp =$('#search_bar').val();
+	console.log(temp);
+	
+	var form={
+			word:temp
+	}
+			$.ajax({
+				url:"getSearchList",
+				type:"POST",
+				data : form,
+				datatype : 'json',
+				success : function(data) {
+					
+					console.log(data);
+					/* var len = Object.keys(data).length; */
+					
+					
+				},
+				error : function(data) {
+					console.log(data);
+					alert("simpleWithObject err");
+				}
+			});
+	});
+	
+
+
+
+
 </script>
 
 </body>
