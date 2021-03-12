@@ -1,5 +1,6 @@
 package com.kkm.market.controller;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -84,6 +85,16 @@ public class MoveController {
 		String market_idx=(String)request.getParameter("idx");
 		
 		ProductVO item = productService.getProductInfo(market_idx);
+		
+		
+		//세자리 콤마 따로 처리
+		DecimalFormat Commas = new DecimalFormat("#,###"); 
+		String settingPrice = (String)Commas.format(item.getMarket_price());
+
+		model.addAttribute("product",item);
+		model.addAttribute("settingPrice",settingPrice);
+		
+		
 		
 		
 		return "productView/productView";

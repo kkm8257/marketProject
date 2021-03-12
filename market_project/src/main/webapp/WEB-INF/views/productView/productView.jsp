@@ -11,12 +11,19 @@
 
 <%@ include file="../header/header.jsp" %>
 
+<div class="productView-div">
+	
+	<div class="productView-form">
+	<button type="button" class="btn btn-outline-info " onclick="history.back()">뒤로가기</button>
+		<img src="/market_path/${product.market_img }" class="product_img">
+		<div class="title">${product.item_title }</div>
+		<div class="desc">${product.item_desc }</div>
+		<div class="price">가격 ${settingPrice}원</div>
+	</div>
+	
 
 
-
-
-
-
+</div>
 
 
 </body>

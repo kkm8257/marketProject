@@ -28,7 +28,7 @@
 
 	<div class="market-list-div">
 		<c:forEach items="${market_list}"  var="list">
-				<div class="col-lg-3 col-md-6 mb-4" onclick="location.href='productView?idx=${list.market_idx}'" style="cursor:pointer;">
+				<div class="col-lg-3 col-md-6 mb-4">
 					<div class="card h-100">
 						<img class="card-img-top" src="/market_path/${list.market_img }"
 							alt="">
@@ -37,7 +37,7 @@
 							<p class="card-text">${list.item_desc }</p>
 						</div>
 						<div class="card-footer">
-							<a href="#" class="btn btn-primary">Find Out More!</a>
+							<a href="productView?idx=${list.market_idx}" class="btn btn-primary">상세정보</a>
 						</div>
 					</div>
 				</div>
