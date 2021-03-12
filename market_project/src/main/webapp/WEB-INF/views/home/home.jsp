@@ -58,7 +58,6 @@
   <div class="d-flex">
       <input class="my-form-control " type="search" placeholder="Search" aria-label="Search" id="search_bar">
       <button class="btn btn-outline-success" type="submit" id="search_btn">Search</button>
-   
    </div>
 
 	<div class="search-list">
@@ -94,11 +93,16 @@ $('#search_btn').on('click',function(){
 				data : form,
 				datatype : 'json',
 				success : function(data) {
-					
-					console.log(data);
-					/* var len = Object.keys(data).length; */
-					
-					
+					$('.search-list').empty();
+					var len = Object.keys(data).length; 
+for (var i = 0; i < len; i++) {
+						
+						$('.search-list').append("<div class='col-lg-3 col-md-6 mb-4'>"+
+								"<div class='card h-100'>"+"<img class='card-img-top' src='/market_path/"+data[i].market_img+"'alt=''>"+
+								"<div class='card-body'>"+"<h4 class='card-title'>"+data[i].item_title+"</h4>"
+								+"<p class='card-text'>"+data[i].item_desc+"</p>"+"</div><div class='card-footer'>"
+								+"<a href='productView?idx="+data[i].market_idx+"' class='btn btn-primary'>상세정보</a></div></div></div>");
+					}
 				},
 				error : function(data) {
 					console.log(data);

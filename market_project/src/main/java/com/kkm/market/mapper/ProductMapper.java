@@ -12,4 +12,7 @@ public interface ProductMapper {
 	public List<ProductVO> getSearchList(String word);
 
 
+	public int setNewItem(ProductVO productVO);
+
+
 }

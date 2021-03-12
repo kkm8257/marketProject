@@ -21,9 +21,12 @@ public class ProductService {
 	}
 	
 	public List<ProductVO> getSearchList(String word){
-		
 		return productMapper.getSearchList(word);
-		
+	}
+	
+	public int setNewItem(ProductVO productVO) {
+		return productMapper.setNewItem(productVO);
+
 	}
 
 	

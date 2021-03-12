@@ -4,21 +4,27 @@
 @import 'font.css';
 
 
-.productView-div{
-	display: flex;
+html,body{
+	height:100%;
+}
+
+.saleView-div{
+	
+		display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	width:100%;
 		font-family: 'ELAND_Choice_M';
-	
+		height:100%;
 	
 }
 
-
-.productView-form{
+.saleView-form{
+	
 	
 	margin-top:100px;
+	height:700px;
 	width: 700px;
 	background-color: #ffffff;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
@@ -29,35 +35,35 @@
 	padding-bottom:50px;
 }
 
-.product_img{
-	border-radius:15px;
-	width:410px;
-	height:410px;
-	display: block;
-	margin-top:15px;
+.kinds{
+	margin-top:20px;
 }
 
 .title{
+	width:250px;
+		margin-top:20px;
 	
-	width:60%;
-	font-weight: bold;
-	font-size:45px;
-	text-align: center;	
 }
-
-.desc{
-	margin-top:15px;
-	width:70%;
-}
-
 
 .price{
-	margin-top:18px;
-	font-size:32px;
-	
+	width:250px;
+		margin-top:20px;
 	
 }
-.btn-outline-info{
-	margin-top:10px;
+.desc{
+		margin-top:20px;
+	
+}
+.file{
+			margin-top:20px;
+	
+}
+
+.submitBtn{
+		margin-top:20px;
+	
+}
+.backBtn{
+		margin-top:20px;
 	
 }

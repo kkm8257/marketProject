@@ -64,6 +64,12 @@ public class MoveController {
 		return "home/joinFail";
 	}
 	
+	@RequestMapping("/saleView")
+	public String goSaleView(){
+			
+		return "productView/saleView";
+	}
+	
 	@RequestMapping("/myInfo")
 	public String goMyInfo(HttpSession session, Model model) {
 		

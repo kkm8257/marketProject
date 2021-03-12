@@ -4,7 +4,7 @@ public class ProductVO {
 	
 	private int market_idx;
 	private int user_idx;
-	private String id;
+	private String id; 
 	private String market_img;
 	private String market_kinds;
 	private int market_price;

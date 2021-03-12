@@ -23,10 +23,15 @@
           </li>
           <%}else if(session.getAttribute("session_ok")!=null&&session.getAttribute("session_ok").equals("ok")){ %>
           
+           <li class="nav-item active">
+            <a class="nav-link" href="saleView"><i class="fas fa-search-dollar fa-2x"></i>
+            </a>
+          </li>
                    <li class="nav-item active">
             <a class="nav-link" href="logout">Logout
             </a>
           </li>
+          
          <li class="nav-item active">
             <a class="nav-link" href="myInfo">myInfo
             </a>

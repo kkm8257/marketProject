@@ -18,5 +18,11 @@
 	
 	</select>
 	
+	<insert id="setNewItem" parameterType="com.kkm.market.vo.ProductVO">
+	
+		insert into m_market values(M_MARKET_SEQ.nextval,#{user_idx} ,#{id},#{market_img},#{market_kinds},#{market_price},sysdate,#{item_desc},#{item_title})
+	
+	</insert>
+	
 
 </mapper>
