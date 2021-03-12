@@ -21,4 +21,8 @@ public class LoginService {
 
 	}
 
+	public UserVO getUserInfoById(String id) {
+		return loginMapper.getUserInfoById(id);
+	}
+
 }

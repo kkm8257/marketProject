@@ -13,7 +13,7 @@
 <div class="login-div fadeInDown">
 	
 		<form action="/" method="post" name="login_form" class="login_form" autocomplete='off' >
-					<div class="login_form_title">OBOOK</div>
+					<div class="login_form_title">LOGIN</div>
 					<input type="text" placeholder="ID" name="input_id" id="input_id_id"  autocomplete='off' class="login_input">
 					<input type="password" placeholder="PASSWORD" name="input_pwd"  id="input_id_pwd" autocomplete=off class="login_input">
 					<div>${nologin}</div>

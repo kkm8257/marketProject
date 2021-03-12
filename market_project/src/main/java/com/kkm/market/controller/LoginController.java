@@ -56,6 +56,16 @@ public class LoginController {
 
 		}
 	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		
+		session.removeAttribute("session_ok");
+		session.removeAttribute("session_id");
+
+		
+		return "home/home";
+		
+	}
 	
 
 	

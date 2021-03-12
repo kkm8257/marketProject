@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+@import url("header.css");
+@import url("footer.css");
+@import 'font.css';
+
+
+.myInfo-div{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width:100%;
+	margin-top:30px;
+}
+
+.info-top{
+	
+	display:flex;
+	align-items:center;
+	width:70%;
+	height:400px;
+	margin-top:40px;
+	border-right: 2px solid #E8E8E8;
+	border-left: 2px solid #E8E8E8;
+
+}
+.info_img{
+	border-radius: 100%;
+	width: 280px;
+	height:280px;
+	margin-left:100px;
+	display: inline-block;
+}
+.info_desc{
+	padding-top:60px;
+	display: inline-flex;
+	flex-direction:column;
+	width:300px;
+	height:300px;
+	margin-left:260px;
+		font-family: 'ELAND_Choice_M';
+	
+}
+.info_desc div:nth-child(1){
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.info_desc div:nth-child(2){
+	margin-top:15px;
+	font-size: 25px;
+	opacity:0.6;
+}
+
+.info_desc div:nth-child(3){
+	margin-top:15px;
+	font-size: 25px;
+}
+
+
+
+.line{
+	
+	width:65%;
+	margin-top:90px;
+	border-top: 2px solid #E8E8E8;
+	
+}
+
+.market-list-div{
+	
+	width:70%;
+	margin-top:60px;
+	width: 70%;
+
+    display: flex;
+    flex-wrap: wrap;
+	
+}
+
+
+
+
+

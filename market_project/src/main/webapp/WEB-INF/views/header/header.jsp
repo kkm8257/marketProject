@@ -14,21 +14,21 @@
         <ul class="navbar-nav ml-auto">
         <%if(session.getAttribute("session_ok")==null){ %>
          <li class="nav-item active">
-            <a class="nav-link" href="/login">Login
+            <a class="nav-link" href="login">Login
             </a>
           </li>
                <li class="nav-item active">
-            <a class="nav-link" href="/join">Join
+            <a class="nav-link" href="join">Join
             </a>
           </li>
           <%}else if(session.getAttribute("session_ok")!=null&&session.getAttribute("session_ok").equals("ok")){ %>
           
                    <li class="nav-item active">
-            <a class="nav-link" href="/login">Logout
+            <a class="nav-link" href="logout">Logout
             </a>
           </li>
-                   <li class="nav-item active">
-            <a class="nav-link" href="/login">myMarket
+         <li class="nav-item active">
+            <a class="nav-link" href="myInfo">myInfo
             </a>
           </li>
           

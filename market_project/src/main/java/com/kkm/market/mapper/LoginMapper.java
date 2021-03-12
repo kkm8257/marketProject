@@ -8,6 +8,8 @@ public interface LoginMapper {
 
 	public UserVO checkLogin(Map param);
 
+	public UserVO getUserInfoById(String id);
+
 
 	
 
