@@ -37,7 +37,7 @@ public class JoinController {
 		param.put("pw", pw);
 		param.put("email", email);
 		param.put("phone", phone);
-	
+		param.put("user_img", "default.png");
 		
 		int n = joinService.insertUser(param);
 		

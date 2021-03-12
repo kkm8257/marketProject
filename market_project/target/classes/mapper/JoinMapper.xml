@@ -5,7 +5,7 @@
 	
 	
 	<insert id="insertUser" parameterType="java.util.HashMap">
-		insert into m_user values(m_user_seq.nextval,#{name},#{id},#{pw},#{email},#{phone})
+		insert into m_user values(m_user_seq.nextval,#{name},#{id},#{pw},#{email},#{phone},#{user_img})
 	</insert>
 
 	<select id="chk_id" resultType="com.kkm.market.vo.UserVO">
