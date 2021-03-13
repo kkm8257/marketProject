@@ -107,5 +107,49 @@ public class MoveController {
 	}
 	
 	
+	@RequestMapping(value="/myInfo_productView"  ,method=RequestMethod.GET )
+	public String goMyInfo_ProductView(Model model,HttpServletRequest request){
+		
+		String market_idx=(String)request.getParameter("idx");
+		
+		ProductVO item = productService.getProductInfo(market_idx);
+		
+		
+		//세자리 콤마 따로 처리
+		DecimalFormat Commas = new DecimalFormat("#,###"); 
+		String settingPrice = (String)Commas.format(item.getMarket_price());
+
+		model.addAttribute("product",item);
+		model.addAttribute("settingPrice",settingPrice);
+		
+		
+		
+		
+		return "productView/myInfoProductView";
+	}
+	
+	
+	@RequestMapping(value="/myInfo_productModify"  ,method=RequestMethod.GET )
+	public String goMyInfo_ProductModify(Model model,HttpServletRequest request){
+		
+		String market_idx=(String)request.getParameter("idx");
+		
+		ProductVO item = productService.getProductInfo(market_idx);
+		
+		
+		//세자리 콤마 따로 처리
+		DecimalFormat Commas = new DecimalFormat("#,###"); 
+		String settingPrice = (String)Commas.format(item.getMarket_price());
+
+		model.addAttribute("product",item);
+		model.addAttribute("settingPrice",settingPrice);
+		
+		
+		
+		
+		return "productView/myInfoProductModifyView";
+	}
+	
+	
 	
 }

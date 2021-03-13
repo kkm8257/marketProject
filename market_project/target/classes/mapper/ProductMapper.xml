@@ -25,4 +25,18 @@
 	</insert>
 	
 
+	<delete id="deleteProduct">
+		
+		delete from m_market where market_idx=#{idx}
+	
+	</delete>
+	
+	<update id="modifyProduct" parameterType="com.kkm.market.vo.ProductVO">
+		
+		update m_market set id=#{id}, market_img=#{market_img}, market_kinds=#{market_kinds} , market_price=#{market_price}, item_desc=#{item_desc}, item_title=#{item_title} where market_idx=#{market_idx}
+	
+	</update>
+	
+	
+
 </mapper>

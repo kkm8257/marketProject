@@ -149,7 +149,7 @@
         -->
 
              <Context docBase="C:\Users\kkm\Desktop\marketProject\market_img\newItems" path="/market_path" reloadable="true"/>
-
+             <Context docBase="C:\market_img\profile" path="/profile_path" reloadable="true"/>
 
 
         <!-- Access log processes all example.

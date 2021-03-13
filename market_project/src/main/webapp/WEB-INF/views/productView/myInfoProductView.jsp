@@ -16,8 +16,8 @@
 	<div class="productView-form">
 	<div class="menu_tip">
 	<button type="button" class="btn btn-outline-info " onclick="history.back()">뒤로가기</button>
-	<button type="button" class="btn btn-outline-info" onclick="location.href=''">수정</button>
-	<button type="button" class="btn btn-outline-info" onclick="location.href=''">삭제</button>
+	<button type="button" class="btn btn-outline-info" onclick="location.href='myInfo_productModify?idx=${product.market_idx}'">수정</button>
+	<button type="button" class="btn btn-outline-info" onclick="location.href='myinfo_product_delete?idx=${product.market_idx}'">삭제</button>
 	</div>	
 		
 		<img src="/market_path/${product.market_img }" class="product_img">

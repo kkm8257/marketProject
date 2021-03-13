@@ -42,28 +42,32 @@ html,body{
 .title{
 	width:250px;
 		margin-top:20px;
+		border-radius: 12px;
 	
+	padding-left:15px;
 }
 
 .price{
 	width:250px;
 		margin-top:20px;
+				border-radius: 12px;
+		padding-left:15px;
 	
 }
 .desc{
-		margin-top:20px;
+		margin-top:100px;
 	
 }
 .file{
-			margin-top:20px;
+			margin-top:40px;
 	
 }
 
 .submitBtn{
 		margin-top:20px;
-	
+		display:inline-block;
 }
 .backBtn{
 		margin-top:20px;
-	
+	display:inline-block;
 }

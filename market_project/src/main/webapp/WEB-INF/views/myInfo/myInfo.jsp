@@ -15,7 +15,7 @@
 
 <div class="myInfo-div">
 	<div class="info-top">
-		<img src="/market_path/profile/default.png" alt="default.png" class="info_img">
+		<img src="/profile_path/default.png" alt="default.png" class="info_img">
 		<div class="info_desc">
 			<div>${user.id } 님의 마켓</div>
 			<div>${user.phone }</div>
@@ -37,7 +37,7 @@
 							<p class="card-text">${list.item_desc }</p>
 						</div>
 						<div class="card-footer">
-							<a href="productView?idx=${list.market_idx}" class="btn btn-primary">상세정보</a>
+							<a href="myInfo_productView?idx=${list.market_idx}" class="btn btn-primary">상세정보</a>
 						</div>
 					</div>
 				</div>

@@ -15,4 +15,10 @@ public interface ProductMapper {
 	public int setNewItem(ProductVO productVO);
 
 
+	public int deleteProduct(int idx);
+
+
+	public int modifyProduct(ProductVO productVO);
+
+
 }

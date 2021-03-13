@@ -29,5 +29,14 @@ public class ProductService {
 
 	}
 
+	public int deleteProduct(int idx) {
+		return productMapper.deleteProduct(idx);
+	}
+
+	public int modifyProduct(ProductVO productVO) {
+		// TODO Auto-generated method stub
+		return productMapper.modifyProduct(productVO);
+	}
+
 	
 }

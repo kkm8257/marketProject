@@ -82,29 +82,116 @@ public class ProductController {
         productVO.setMarket_img(fileName);
         
      int n =   productService.setNewItem(productVO);
-        
-//        db에 등록과정 추가코딩  //db에 저장된 폴더 경로 모두 수정 모으기
-        
-        ///
-        //경로 생성
-        if ( ! new File(uploadPath).exists()) {
-            new File(uploadPath).mkdirs();
-        }
-        //파일 복사
-        try {
-            FileCopyUtils.copy(file.getBytes(), target);
-            mv.addObject("file", file);
-        } catch(Exception e) {
-            e.printStackTrace();
-            mv.addObject("file", "error");
-        }
-        //View 위치 설정
-        mv.setViewName("home/home");
-		
-		
-		return mv;
+       if(n>0) {
+    	   
+
+           if ( ! new File(uploadPath).exists()) {
+               new File(uploadPath).mkdirs();
+           }
+           //파일 복사
+           try {
+               FileCopyUtils.copy(file.getBytes(), target);
+               mv.addObject("file", file);
+           } catch(Exception e) {
+               e.printStackTrace();
+               mv.addObject("file", "error");
+           }
+           //View 위치 설정
+           mv.setViewName("home/home");
+   		
+   		
+   		return mv;
+    	   
+    	   
+       }
+       else {
+    	   System.out.println("등록실패! 오류");
+    	    mv.setViewName("home/home");
+       		
+       		return mv;
+       }
+
 	}
 	
+	@RequestMapping(value="myinfo_product_delete" , method=RequestMethod.GET )
+	public String myinfo_product_delete(HttpServletRequest request) {
+		
+		
+		String market_idx=(String)request.getParameter("idx");
+
+		int n =productService.deleteProduct(Integer.parseInt(market_idx));
+		if(n>0) {
+			System.out.println("게시물 삭제 완료");
+		}
+		else {
+			System.out.println("게시물 삭제 실패");
+		}
+		
+		return "redirect:myInfo";
+	}
+	
+	@RequestMapping("modifyProduct")
+	public ModelAndView  modifyProduct(MultipartFile file, ModelAndView mv,HttpSession session,@RequestParam("market_idx") String market_idx,@RequestParam("item_kinds") String kinds,@RequestParam("item_title") String title,@RequestParam("item_price") String price,@RequestParam("item_desc") String desc) {
+
+//		C:\Users\kkm\Desktop\marketProject\market_img\newItems
+		
+		UserVO user=loginService.getUserInfoById((String)session.getAttribute("session_id"));
+		
+		System.out.println("mar"+market_idx);
+		
+		Random random = new Random();
+		int bound = 10000;
+		
+		//https://joalog.tistory.com/48
+
+        String fileName = Integer.toString(random.nextInt(bound))+file.getOriginalFilename();
+        File target = new File(uploadPath, fileName);
+        
+        ProductVO productVO= new ProductVO();
+        
+        productVO.setMarket_idx(Integer.parseInt(market_idx));
+        productVO.setUser_idx(user.getUser_idx());
+        productVO.setId(user.getId());
+        productVO.setItem_title(title);
+        productVO.setItem_desc(desc);
+        productVO.setMarket_kinds(kinds);
+        productVO.setMarket_price(Integer.parseInt(price));
+        
+        productVO.setMarket_img(fileName);
+        
+     int n =   productService.modifyProduct(productVO);
+     
+     
+       if(n>0) {
+    	   
+
+           if ( ! new File(uploadPath).exists()) {
+               new File(uploadPath).mkdirs();
+           }
+           //파일 복사
+           try {
+               FileCopyUtils.copy(file.getBytes(), target);
+               mv.addObject("file", file);
+           } catch(Exception e) {
+               e.printStackTrace();
+               mv.addObject("file", "error");
+           }
+           //View 위치 설정
+           mv.setViewName("myInfo/myInfo");
+   		
+   		
+   		return mv;
+    	   
+    	   
+       }
+       else {
+    	   System.out.println("등록실패! 오류");
+    	    mv.setViewName("home/home");
+       		
+       		return mv;
+       }
+
+	}
 	
 	
 }
