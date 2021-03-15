@@ -13,7 +13,7 @@ public class ProductVO {
 	private String item_title;
 	
 	
-	
+	//item
 	
 	public String getItem_title() {
 		return item_title;
